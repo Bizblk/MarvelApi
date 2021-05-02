@@ -18,6 +18,7 @@
 		141425C7263DEDA200DC9735 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425C6263DEDA200DC9735 /* NetworkManager.swift */; };
 		141425CB263E837E00DC9735 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425CA263E837E00DC9735 /* Extension + String.swift */; };
 		141425CF263E84FF00DC9735 /* HeroesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */; };
+		141425D6263E95AE00DC9735 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		141425C6263DEDA200DC9735 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		141425CA263E837E00DC9735 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewController.swift; sourceTree = "<group>"; };
+		141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				141425AB263C619500DC9735 /* ViewController.swift */,
 				141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */,
+				141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				141425CF263E84FF00DC9735 /* HeroesCollectionViewController.swift in Sources */,
+				141425D6263E95AE00DC9735 /* HeroCollectionViewCell.swift in Sources */,
 				141425CB263E837E00DC9735 /* Extension + String.swift in Sources */,
 				141425C7263DEDA200DC9735 /* NetworkManager.swift in Sources */,
 				141425AC263C619500DC9735 /* ViewController.swift in Sources */,

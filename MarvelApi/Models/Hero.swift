@@ -22,6 +22,8 @@ struct Character: Codable {
     let id: Int?
     let name: String?
     let descritpion: String?
+    let thumbnail: [String: String]?
+    
     
 }
 
