@@ -11,6 +11,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    //MARK: - Private Properties
     private let publicKey = "809bc2ac4467a13ea6cd8d68e25a1b46"
     private let privateKey = "c6eb2accce068b5f78dacab01bf8f510f28705e7"
     
@@ -24,8 +25,8 @@ class NetworkManager {
     }
     
     
-    func fetchHero(heroess: @escaping ([Character]) -> Void) {
-        var heroes = [Character]()
+    func fetchHero(heroess: @escaping ([Hero]) -> Void) {
+        var heroes = [Hero]()
         let ts = "\(Date().timeIntervalSince1970)"
         let hash = "\(ts)\(privateKey)\(publicKey)".MD5
         
@@ -75,7 +76,7 @@ class NetworkManager {
         }.resume()
         
     }
-
+    
     private init() {}
 }
 

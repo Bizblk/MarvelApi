@@ -9,28 +9,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    var hero: Character!
-    
+    //MARK: - IB Outlets
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var heroNameLable: UILabel!
-    @IBOutlet weak var heroDescriptionTextView: UITextView!
+    @IBOutlet weak var heroDescriptionLabel: UILabel!
     
+    //MARK: - Public Properties
+    var hero: Hero!
+
     
+    //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        heroNameLable.text = hero.name
+        heroDescriptionLabel.text = hero.description
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

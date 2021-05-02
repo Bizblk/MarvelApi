@@ -13,23 +13,6 @@ struct APIResult: Codable {
 
 struct APICharacterData: Codable {
     let count: Int?
-    let results: [Character]
-    
-}
-
-struct Character: Codable {
-    
-    let id: Int?
-    let name: String?
-    let descritpion: String?
-    let thumbnail: [String: String]?
-    
-    
-}
-
-
-
-struct APIResultHeros: Codable {
     let results: [Hero]
     
 }
@@ -38,6 +21,12 @@ struct Hero: Codable {
     
     let id: Int?
     let name: String?
-    let descritpion: String?
+    let description: String?
+    let thumbnail: [String: String]?
+    
     
 }
+
+
+
+
