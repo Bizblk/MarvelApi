@@ -19,6 +19,7 @@
 		141425CB263E837E00DC9735 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425CA263E837E00DC9735 /* Extension + String.swift */; };
 		141425CF263E84FF00DC9735 /* HeroesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */; };
 		141425D6263E95AE00DC9735 /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */; };
+		141425D9263F27E100DC9735 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425D8263F27E100DC9735 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		141425CA263E837E00DC9735 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 		141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesCollectionViewController.swift; sourceTree = "<group>"; };
 		141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		141425D8263F27E100DC9735 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				141425AB263C619500DC9735 /* ViewController.swift */,
 				141425CE263E84FF00DC9735 /* HeroesCollectionViewController.swift */,
 				141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */,
+				141425D8263F27E100DC9735 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				141425AC263C619500DC9735 /* ViewController.swift in Sources */,
 				141425A8263C619500DC9735 /* AppDelegate.swift in Sources */,
 				141425AA263C619500DC9735 /* SceneDelegate.swift in Sources */,
+				141425D9263F27E100DC9735 /* DetailViewController.swift in Sources */,
 				141425BF263DCA2F00DC9735 /* Hero.swift in Sources */,
 				141425C3263DCBC300DC9735 /* Series.swift in Sources */,
 			);

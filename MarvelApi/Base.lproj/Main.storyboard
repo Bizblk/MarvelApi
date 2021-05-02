@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MV2-1a-H09">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="marvelHeroes" translatesAutoresizingMaskIntoConstraints="NO" id="Shv-s8-9x4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM9-rt-ad5">
-                                <rect key="frame" x="70" y="409" width="180" height="51"/>
+                                <rect key="frame" x="70" y="497" width="180" height="51"/>
                                 <color key="backgroundColor" red="0.93534433839999997" green="0.123580806" blue="0.1677425206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Public API">
@@ -57,7 +57,7 @@
             <objects>
                 <collectionViewController id="EJN-6E-Gje" customClass="HeroesCollectionViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ati-37-Dn7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="40" id="1Ke-PB-lOr">
@@ -98,6 +98,7 @@
                                 <connections>
                                     <outlet property="heroImageView" destination="36Q-Pw-Yxa" id="1FP-w6-lw0"/>
                                     <outlet property="heroNameLabel" destination="kQS-ig-YtY" id="vny-72-cgF"/>
+                                    <segue destination="nng-nz-Jkb" kind="show" id="yxM-MG-7O6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -112,13 +113,64 @@
             </objects>
             <point key="canvasLocation" x="1987.5" y="123.75"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="yrk-1e-jum">
+            <objects>
+                <viewController id="nng-nz-Jkb" customClass="DetailViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qwh-Yl-aGk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="C1V-7X-3J7">
+                                <rect key="frame" x="20" y="64" width="280" height="454"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-s6-6Eb">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="204"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ban-Tc-Vdc">
+                                        <rect key="frame" x="0.0" y="208" width="280" height="34.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="06p-r9-0FE">
+                                        <rect key="frame" x="0.0" y="246.5" width="280" height="207.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GyB-AF-R6O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="C1V-7X-3J7" firstAttribute="leading" secondItem="GyB-AF-R6O" secondAttribute="leading" constant="20" id="5uZ-dI-dvk"/>
+                            <constraint firstItem="C1V-7X-3J7" firstAttribute="top" secondItem="GyB-AF-R6O" secondAttribute="top" constant="20" id="ALX-Tg-NVS"/>
+                            <constraint firstItem="GyB-AF-R6O" firstAttribute="bottom" secondItem="C1V-7X-3J7" secondAttribute="bottom" constant="50" id="SIu-VW-dp7"/>
+                            <constraint firstItem="GyB-AF-R6O" firstAttribute="trailing" secondItem="C1V-7X-3J7" secondAttribute="trailing" constant="20" id="vnJ-kf-H8v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XYh-og-xqU"/>
+                    <connections>
+                        <outlet property="heroDescriptionTextView" destination="06p-r9-0FE" id="4EX-YE-w9v"/>
+                        <outlet property="heroImageView" destination="fg3-s6-6Eb" id="hN8-2l-lh6"/>
+                        <outlet property="heroNameLable" destination="ban-Tc-Vdc" id="c0C-AW-Fv8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GEc-M5-ccs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2978" y="124"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhp-Ln-jUn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MV2-1a-H09" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xXE-Xc-hk9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -137,6 +189,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
