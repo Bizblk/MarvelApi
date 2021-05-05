@@ -7,10 +7,28 @@
 
 import Foundation
 
+struct APISeries: Codable {
+    let data: APISeriesData
+}
+
+struct APISeriesData: Codable {
+    let count: Int?
+    let results: [Series]
+    
+}
+
+
 struct Series: Codable {
    
     let id: Int?
     let title: String?
     let description: String?
+    let rating: String?
+    let thumbnail: [String: String]?
     
+}
+
+struct Thumbnail: Codable {
+    let path: String?
+    var ext = "jpg"
 }

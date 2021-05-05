@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MV2-1a-H09">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,19 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="marvelHeroes" translatesAutoresizingMaskIntoConstraints="NO" id="Shv-s8-9x4">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM9-rt-ad5">
-                                <rect key="frame" x="70" y="497" width="180" height="51"/>
+                                <rect key="frame" x="70" y="707" width="235" height="51"/>
                                 <color key="backgroundColor" red="0.93534433839999997" green="0.123580806" blue="0.1677425206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
                                 <state key="normal" title="Public API">
@@ -59,7 +59,7 @@
             <objects>
                 <collectionViewController id="EJN-6E-Gje" customClass="HeroesCollectionViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ati-37-Dn7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="40" id="1Ke-PB-lOr">
@@ -70,7 +70,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SRD-Qx-Vke" customClass="HeroCollectionViewCell" customModule="MarvelApi" customModuleProvider="target">
-                                <rect key="frame" x="85" y="40" width="150" height="100"/>
+                                <rect key="frame" x="0.0" y="40" width="150" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="O8c-jS-6NX">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
@@ -80,7 +80,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="74"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQS-ig-YtY">
-                                            <rect key="frame" x="0.0" y="74.5" width="150" height="21.5"/>
+                                            <rect key="frame" x="0.0" y="74.333333333333329" width="150" height="21.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -119,23 +119,23 @@
             <objects>
                 <viewController id="nng-nz-Jkb" customClass="DetailViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qwh-Yl-aGk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C1V-7X-3J7">
-                                <rect key="frame" x="20" y="64" width="280" height="454"/>
+                                <rect key="frame" x="20" y="108" width="335" height="620"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-s6-6Eb">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="148"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="349"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ban-Tc-Vdc">
-                                        <rect key="frame" x="0.0" y="153" width="280" height="269.5"/>
+                                        <rect key="frame" x="0.0" y="354" width="335" height="234.66666666666663"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLb-Za-aY8">
-                                        <rect key="frame" x="0.0" y="427.5" width="280" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="593.66666666666663" width="335" height="26.333333333333371"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -152,7 +152,15 @@
                             <constraint firstItem="GyB-AF-R6O" firstAttribute="trailing" secondItem="C1V-7X-3J7" secondAttribute="trailing" constant="20" id="vnJ-kf-H8v"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XYh-og-xqU"/>
+                    <navigationItem key="navigationItem" id="XYh-og-xqU">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="oUh-HV-i0M">
+                            <connections>
+                                <action selector="seriesAction:" destination="nng-nz-Jkb" id="0Ck-V7-URY"/>
+                                <segue destination="FCP-z3-nI5" kind="showDetail" identifier="series" id="Y5N-NY-OGt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="heroDescriptionLabel" destination="oLb-Za-aY8" id="6SK-qb-PQF"/>
                         <outlet property="heroImageView" destination="fg3-s6-6Eb" id="hN8-2l-lh6"/>
@@ -163,13 +171,100 @@
             </objects>
             <point key="canvasLocation" x="2978" y="124"/>
         </scene>
+        <!--Series Table View Controller-->
+        <scene sceneID="8Rh-09-CKA">
+            <objects>
+                <tableViewController id="FCP-z3-nI5" customClass="SeriesTableViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="HMW-xg-VHC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="series" id="RTN-CE-3c8">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RTN-CE-3c8" id="Xbe-lZ-SbE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zXa-mQ-9Vw" kind="show" identifier="detailSeries" id="Sj4-Jj-rOE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FCP-z3-nI5" id="dG4-Qv-lOh"/>
+                            <outlet property="delegate" destination="FCP-z3-nI5" id="g6o-kB-bja"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE2-bY-iVT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855" y="124"/>
+        </scene>
+        <!--Detail Series View Controller-->
+        <scene sceneID="zAJ-5K-Q9O">
+            <objects>
+                <viewController id="zXa-mQ-9Vw" customClass="DetailSeriesViewController" customModule="MarvelApi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="auB-4r-dbx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ElQ-ci-S7e">
+                                <rect key="frame" x="20" y="20" width="335" height="684"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Q4-hU-pR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="163.66666666666666"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVk-7X-gWh">
+                                        <rect key="frame" x="0.0" y="173.66666666666663" width="335" height="163.33333333333337"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VN-p4-cbz">
+                                        <rect key="frame" x="0.0" y="347" width="335" height="163.66666666666663"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR7-cR-nQx">
+                                        <rect key="frame" x="0.0" y="520.66666666666663" width="335" height="163.33333333333337"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eQu-J4-60h"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eQu-J4-60h" firstAttribute="trailing" secondItem="ElQ-ci-S7e" secondAttribute="trailing" constant="20" id="Dd7-Jx-A4c"/>
+                            <constraint firstItem="ElQ-ci-S7e" firstAttribute="leading" secondItem="eQu-J4-60h" secondAttribute="leading" constant="20" id="M68-9a-Kv0"/>
+                            <constraint firstItem="eQu-J4-60h" firstAttribute="bottom" secondItem="ElQ-ci-S7e" secondAttribute="bottom" constant="20" id="jgX-7L-rV4"/>
+                            <constraint firstItem="ElQ-ci-S7e" firstAttribute="top" secondItem="eQu-J4-60h" secondAttribute="top" constant="20" id="jtP-i4-0Ao"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="irU-Lu-zCa"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="rR7-cR-nQx" id="GJV-fo-FNh"/>
+                        <outlet property="imageSeriesView" destination="6Q4-hU-pR8" id="FOz-3A-epP"/>
+                        <outlet property="ratingLabel" destination="9VN-p4-cbz" id="Fsc-pn-NPv"/>
+                        <outlet property="titleLabel" destination="gVk-7X-gWh" id="NPh-tT-xfr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9H-nr-lCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4669.6000000000004" y="123.68815592203899"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fhp-Ln-jUn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MV2-1a-H09" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xXE-Xc-hk9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -21,8 +21,22 @@ class DetailViewController: UIViewController {
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         heroNameLable.text = hero.name
         heroDescriptionLabel.text = hero.description
-        
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "series" {
+            
+            guard let seriesVC = segue.destination as? SeriesTableViewController else { return }
+            guard let idSeries = hero.id else { return }
+            
+            seriesVC.fetchSeries(id: String(idSeries))
+            
+        }
+    }
+    
+    
 }
