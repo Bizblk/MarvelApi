@@ -17,45 +17,35 @@ class NetworkManager {
     
     private init() {}
     
-    func getImageURL(data: [String: String]) -> URL {
-        let path = data["path"] ?? ""
-        let ext = data["extension"] ?? ""
+    func getImageURL(data: Thumbnail) -> URL {
+        let path = data.path ?? ""
+        let ext = data.ext ?? ""
         
         return URL(string: "\(path).\(ext)")!
     }
     
-    
-    func fetchHero(heroess: @escaping ([Hero]) -> Void) {
-        var heroes = [Hero]()
+    func fetchHero(heroes: @escaping ([Hero]) -> Void) {
+        
         let ts = "\(Date().timeIntervalSince1970)"
         let hash = "\(ts)\(privateKey)\(publicKey)".md5
         
         guard let url = URL(string: "https://gateway.marvel.com:443/v1/public/characters?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)") else { return }
         
-        let session = URLSession(configuration: .default)
-        session.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            guard let APIData = data else {
-                print("no data")
-                return
-            }
-            
-            do {
-                let characters = try JSONDecoder().decode(APIResult.self, from: APIData)
-                DispatchQueue.main.async {
-                    heroes.append(contentsOf: characters.data.results)
-                    heroess(heroes)
+        AF.request(url)
+            .validate()
+            .responseJSON { (dataResponse) in
+                switch dataResponse.result {
+                
+                case .success(let value):
+                    guard let results = Hero.getHeroes(value: value) else { return }
+                    DispatchQueue.main.async {
+                        heroes(results)
+                    }
+                    
+                case .failure(let error):
+                    print(error)
                 }
             }
-            catch {
-                print(error.localizedDescription)
-            }
-        }
-        .resume()
     }
     
     
@@ -82,7 +72,6 @@ class NetworkManager {
         let ts = "\(Date().timeIntervalSince1970)"
         let hash = "\(ts)\(privateKey)\(publicKey)".md5
         
-        var seriess = [Series]()
         guard let url = URL(string: "https://gateway.marvel.com:443/v1/public/characters/\(id)/series?ts=\(ts)&apikey=\(publicKey)&hash=\(hash)") else { return }
         
         AF.request(url)
@@ -91,24 +80,9 @@ class NetworkManager {
                 switch dataResponse.result {
                 
                 case .success(let value):
-                    guard let response = value as? [String: Any] else { return }
-                    guard let data = response["data"] as? [String : Any] else { return }
-                    guard let dataResults = data["results"] as? [[String: Any]] else { return }
-                    
-                    for seriesData in dataResults {
-                        let series = Series(id: seriesData["id"] as? Int,
-                                            title: seriesData["title"] as? String,
-                                            description: seriesData["description"] as? String,
-                                            rating: seriesData["rating"] as? String,
-                                            thumbnail: seriesData["thumbnail"] as? [String: String]
-                                            
-                                            
-                        )
-                        seriess.append(series)
-                    }
-                    
+                    guard let results = Series.getSeries(value: value) else { return }
                     DispatchQueue.main.async {
-                        series(seriess)
+                        series(results)
                     }
                     
                 case .failure(let error):

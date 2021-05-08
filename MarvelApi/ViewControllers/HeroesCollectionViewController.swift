@@ -20,7 +20,7 @@ class HeroesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        spinnerView = showSpinner(in: view)
+        
     }
     
     // MARK: - Navigation
@@ -48,10 +48,8 @@ class HeroesCollectionViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HeroCollectionViewCell
-
         let hero = heroes[indexPath.item]
         cell.setupCell(hero: hero)
-        
         return cell
     }
     
