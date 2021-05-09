@@ -68,9 +68,9 @@ class DetailViewController: UIViewController {
     
     
     func setupImageView() {
-        heroImageView.contentMode = .scaleAspectFit
+        heroImageView.contentMode = .scaleAspectFill
         heroImageView.clipsToBounds = true
-        heroImageView.layer.cornerRadius = heroImageView.frame.height / 4
+        heroImageView.layer.cornerRadius = heroImageView.frame.height / 2
         heroImageView.backgroundColor = .white
         heroImageView.fetchImage(url: hero.urlString)
         

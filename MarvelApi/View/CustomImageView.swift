@@ -9,9 +9,8 @@ import UIKit
 
 class CustomImageView: UIImageView {
     
-    
     func fetchImage(url: String) {
-        
+                
         guard let imageUrl = URL(string: url) else {
             image = #imageLiteral(resourceName: "marvel")
             return

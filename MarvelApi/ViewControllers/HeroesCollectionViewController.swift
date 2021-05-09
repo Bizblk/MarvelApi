@@ -7,20 +7,17 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
 
 class HeroesCollectionViewController: UICollectionViewController {
     
     //MARK: - Public Properties
     var heroes = [Hero]()
     
-    private var spinnerView: UIActivityIndicatorView!
     
     //MARK: - Life Cycles Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        fetchHero()
     }
     
     // MARK: - Navigation
@@ -47,24 +44,14 @@ class HeroesCollectionViewController: UICollectionViewController {
     }
     
     func fetchHero() {
-        NetworkManager.shared.fetchHero { (dataHeroes) in
-            self.heroes = dataHeroes
-            self.collectionView.reloadData()
+        DispatchQueue.main.async {
+            NetworkManager.shared.fetchHero { (dataHeroes) in
+                self.heroes = dataHeroes
+                self.collectionView.reloadData()
+            }
         }
-    }
-    
-    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .white
-        activityIndicator.startAnimating()
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
         
-        view.addSubview(activityIndicator)
-        
-        return activityIndicator
     }
-    
 }
 
 
