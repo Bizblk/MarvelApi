@@ -17,11 +17,11 @@ class NetworkManager {
     
     private init() {}
     
-    func getImageURL(data: Thumbnail) -> URL {
+    func getImageUrlString(data: Thumbnail) -> String {
         let path = data.path ?? ""
         let ext = data.ext ?? ""
         
-        return URL(string: "\(path).\(ext)")!
+        return "\(path).\(ext)"
     }
     
     func fetchHero(heroes: @escaping ([Hero]) -> Void) {
@@ -49,23 +49,24 @@ class NetworkManager {
     }
     
     
-    func fetchImage(url: URL, imageData: @escaping (Data) -> Void) {
+    func fetchImage(url: URL, imageData: @escaping (Data, URLResponse) -> Void) {
         
         AF.request(url)
             .validate()
             .response { (data) in
+                guard let response = data.response else { return }
                 switch data.result {
                 case .success(let data):
                     guard let data = data else { return }
-                    
                     DispatchQueue.main.async {
-                        imageData(data)
+                        imageData(data, response)
                     }
                 case .failure(let error):
                     print(error)
                 }
             }
     }
+    
     
     func fetchSeries(id: String, series: @escaping ([Series]) -> Void) {
         

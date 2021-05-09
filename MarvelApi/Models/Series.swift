@@ -15,6 +15,10 @@ struct Series: Codable {
     let rating: String?
     let thumbnail: Thumbnail?
     
+    var urlString: String {
+        "\(thumbnail?.path ?? "no").\(thumbnail?.ext ?? "data")"
+    }
+    
     
     init(dict: [String: Any]) {
         id = dict["id"] as? Int
@@ -43,7 +47,10 @@ struct Hero: Codable {
     let name: String?
     let description: String?
     let thumbnail: Thumbnail?
-    
+        
+    var urlString: String {
+        "\(thumbnail?.path ?? "no").\(thumbnail?.ext ?? "data")"
+    }
     
     init(dict: [String: Any]) {
         id = dict["id"] as? Int

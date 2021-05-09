@@ -31,13 +31,6 @@ class HeroesCollectionViewController: UICollectionViewController {
             guard let detailVC = segue.destination as? DetailViewController else { return }
             guard  let index = collectionView.indexPathsForSelectedItems?.first else { return }
             detailVC.hero = heroes[index.item]
-            
-            guard let thumbnail = heroes[index.item].thumbnail else { return }
-            let url = NetworkManager.shared.getImageURL(data: thumbnail)
-            
-            NetworkManager.shared.fetchImage(url: url) { (dataImage) in
-                detailVC.heroImageView.image = UIImage(data: dataImage)
-            }
         }
     }
     

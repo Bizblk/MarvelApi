@@ -12,10 +12,8 @@ class SeriesTableViewController: UITableViewController {
     
     var series = [Series]()
 
-
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return series.count
     }
     
@@ -37,14 +35,8 @@ class SeriesTableViewController: UITableViewController {
         guard let detailSeriesVC = segue.destination as? DetailSeriesViewController else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         
-        let sendSeries = series[indexPath.row]
-        detailSeriesVC.series = sendSeries
+        detailSeriesVC.series = series[indexPath.row]
     }
-    
-    
-    
-    
-    
     
     func fetchSeries(id: String) {
         NetworkManager.shared.fetchSeries(id: id) { (dataSeries) in

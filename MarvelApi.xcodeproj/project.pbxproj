@@ -21,6 +21,10 @@
 		141425D9263F27E100DC9735 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141425D8263F27E100DC9735 /* DetailViewController.swift */; };
 		14BCF1E52642EBBF00BC742D /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF1E42642EBBF00BC742D /* SeriesTableViewController.swift */; };
 		14BCF1EE2643342100BC742D /* DetailSeriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF1ED2643342100BC742D /* DetailSeriesViewController.swift */; };
+		14BCF1FD2646D15400BC742D /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF1FC2646D15400BC742D /* CustomImageView.swift */; };
+		14BCF2002648012E00BC742D /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF1FF2648012E00BC742D /* StorageManager.swift */; };
+		14BCF20326480FA700BC742D /* FavoritHeroesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF20226480FA700BC742D /* FavoritHeroesTableViewController.swift */; };
+		14BCF2062648156300BC742D /* FavoritHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BCF2052648156300BC742D /* FavoritHeroTableViewCell.swift */; };
 		9452E63344637A20B5DAB293 /* Pods_MarvelApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9EE66403788C994B2FAD6A6 /* Pods_MarvelApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		141425D8263F27E100DC9735 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14BCF1E42642EBBF00BC742D /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		14BCF1ED2643342100BC742D /* DetailSeriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSeriesViewController.swift; sourceTree = "<group>"; };
+		14BCF1FC2646D15400BC742D /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		14BCF1FF2648012E00BC742D /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		14BCF20226480FA700BC742D /* FavoritHeroesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritHeroesTableViewController.swift; sourceTree = "<group>"; };
+		14BCF2052648156300BC742D /* FavoritHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritHeroTableViewCell.swift; sourceTree = "<group>"; };
 		4E6733D44647A8BF77952C6B /* Pods-MarvelApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApi.release.xcconfig"; path = "Target Support Files/Pods-MarvelApi/Pods-MarvelApi.release.xcconfig"; sourceTree = "<group>"; };
 		5FD87E454E27DBD808B14D30 /* Pods-MarvelApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApi.debug.xcconfig"; path = "Target Support Files/Pods-MarvelApi/Pods-MarvelApi.debug.xcconfig"; sourceTree = "<group>"; };
 		C9EE66403788C994B2FAD6A6 /* Pods_MarvelApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				141425C6263DEDA200DC9735 /* NetworkManager.swift */,
+				14BCF1FF2648012E00BC742D /* StorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 				141425D8263F27E100DC9735 /* DetailViewController.swift */,
 				14BCF1E42642EBBF00BC742D /* SeriesTableViewController.swift */,
 				14BCF1ED2643342100BC742D /* DetailSeriesViewController.swift */,
+				14BCF20226480FA700BC742D /* FavoritHeroesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -134,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				141425D5263E95AE00DC9735 /* HeroCollectionViewCell.swift */,
+				14BCF1FC2646D15400BC742D /* CustomImageView.swift */,
+				14BCF2052648156300BC742D /* FavoritHeroTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,9 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BCF1EE2643342100BC742D /* DetailSeriesViewController.swift in Sources */,
+				14BCF20326480FA700BC742D /* FavoritHeroesTableViewController.swift in Sources */,
+				14BCF1FD2646D15400BC742D /* CustomImageView.swift in Sources */,
 				141425CF263E84FF00DC9735 /* HeroesCollectionViewController.swift in Sources */,
 				14BCF1E52642EBBF00BC742D /* SeriesTableViewController.swift in Sources */,
 				141425D6263E95AE00DC9735 /* HeroCollectionViewCell.swift in Sources */,
+				14BCF2062648156300BC742D /* FavoritHeroTableViewCell.swift in Sources */,
 				141425CB263E837E00DC9735 /* Extension + String.swift in Sources */,
 				141425C7263DEDA200DC9735 /* NetworkManager.swift in Sources */,
 				141425AC263C619500DC9735 /* MainViewController.swift in Sources */,
@@ -280,6 +295,7 @@
 				141425AA263C619500DC9735 /* SceneDelegate.swift in Sources */,
 				141425D9263F27E100DC9735 /* DetailViewController.swift in Sources */,
 				141425C3263DCBC300DC9735 /* Series.swift in Sources */,
+				14BCF2002648012E00BC742D /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

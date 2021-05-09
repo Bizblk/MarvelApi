@@ -10,7 +10,7 @@ import UIKit
 class HeroCollectionViewCell: UICollectionViewCell {
     
     // MARK: IBOutlets
-    @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet weak var heroImageView: CustomImageView!
     @IBOutlet weak var heroNameLabel: UILabel!
     
     private var spinnerView: UIActivityIndicatorView!
@@ -23,14 +23,10 @@ class HeroCollectionViewCell: UICollectionViewCell {
         spinnerView = showSpinner(in: contentView)
         
         
-        DispatchQueue.global().async {
-            guard let thumbnail = hero?.thumbnail else { return }
-            let imageUrl = NetworkManager.shared.getImageURL(data: thumbnail)
-            guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-            DispatchQueue.main.async {
-                self.heroImageView.image = UIImage(data: imageData)
-                self.spinnerView.stopAnimating()
-            }
+        DispatchQueue.main.async {
+            guard let urlString = hero?.urlString else { return }
+            self.heroImageView.fetchImage(url: urlString)
+            self.spinnerView.stopAnimating()
         }
     }
     

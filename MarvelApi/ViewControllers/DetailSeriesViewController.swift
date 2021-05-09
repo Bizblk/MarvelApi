@@ -9,7 +9,7 @@ import UIKit
 
 class DetailSeriesViewController: UIViewController {
     
-    @IBOutlet weak var imageSeriesView: UIImageView!
+    @IBOutlet weak var imageSeriesView: CustomImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -19,19 +19,11 @@ class DetailSeriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchImage()
         titleLabel.text = series.title
         ratingLabel.text = series.rating
         descriptionLabel.text = series.description
-    }
-    
-    
-    func fetchImage() {
-        guard let thumbnail = series.thumbnail else { return }
-        let url = NetworkManager.shared.getImageURL(data: thumbnail)
-        
-        NetworkManager.shared.fetchImage(url: url) { (dataImage) in
-            self.imageSeriesView.image = UIImage(data: dataImage)
+        DispatchQueue.main.async {
+            self.imageSeriesView.fetchImage(url: self.series.urlString)
         }
     }
    
