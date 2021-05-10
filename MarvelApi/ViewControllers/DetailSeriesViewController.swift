@@ -22,6 +22,7 @@ class DetailSeriesViewController: UIViewController {
         titleLabel.text = series.title
         ratingLabel.text = series.rating
         descriptionLabel.text = series.description
+        
         DispatchQueue.main.async {
             self.imageSeriesView.fetchImage(url: self.series.urlString)
         }

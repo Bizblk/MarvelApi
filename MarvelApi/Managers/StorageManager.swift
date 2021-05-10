@@ -13,9 +13,7 @@ class StorageManager {
     private let key = "heroes"
     
     private init() {}
-    
-    
-    
+        
     func saveFavoritHero(hero: Hero) {
         
         var favoritHeroes = fetchHeroes()

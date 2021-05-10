@@ -46,13 +46,11 @@ class DetailViewController: UIViewController {
             if favoritHeroes[indexHero].id == hero.id {
                 StorageManager.shared.deleteFavoritHero(index: indexHero)
                 addFavoritButton.setImage(UIImage(systemName: "heart"), for: .normal)
-                print(favoritHeroes.count)
                 return
             }
         }
         StorageManager.shared.saveFavoritHero(hero: hero)
         addFavoritButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-        print(favoritHeroes.count)
     }
     
     private func setupFavoritButton() {
